@@ -1,5 +1,8 @@
 "use client";
 import { useState } from "react";
+import { useContext } from "react";
+import { WeatherContext } from "@/context/Weather";
+import Mainweather from "@/components/weather/Mainweather";
 
 export default function Recherche() {
   const [inputValue, setInputValue] = useState("");
@@ -61,29 +64,8 @@ export default function Recherche() {
         Rechercher
       </button>
       {isLoading && <p className="text-white">Loading...</p>}
-      {error && <p>{error}</p>}
-      {location && (
-        <div className="text-white">
-          <p>Latitude: {location.lat}</p>
-          <p>Longitude: {location.lon}</p>
-        </div>
-      )}
-      {/* https://openweathermap.org/current */}
-      {weather && (
-        <div className="text-white">
-          {weather.main && <p>Temperature: {weather.main.temp}°C</p>}
-          {weather.main && (
-            <p>wind_speed: {Math.round(weather.wind.speed * 3.6)}km/h</p>
-          )}
-          {weather.main && <p>wind_deg: {weather.wind.deg}°</p>}
-          {weather.weather && weather.weather[0] && (
-            <p>Weather: {weather.weather[0].main}</p>
-          )}
-          {weather.weather && weather.weather[0] && (
-            <p>Weather: {weather.weather[0].description}</p>
-          )}
-        </div>
-      )}
+      {error && <p className="text-red-500">{error}</p>}
+      <Mainweather weather={weather}></Mainweather>
     </div>
   );
 }
