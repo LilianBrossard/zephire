@@ -3,19 +3,8 @@ import Image from "next/image";
 
 export default function Recherche() {
   return (
-    <div className="flex flex-row justify-between px-4 py-2 xl:px-16 z-10 w-screen styleback">
-      <a href="/">
-        <button
-          className="button hover:scale-105 duration-700 px-4"
-          data-text="Zephire"
-        >
-          <span className="actual-text">&nbsp;ZEPHIRE&nbsp;</span>
-          <span aria-hidden="true" className="hover-text">
-            &nbsp;ZEPHIRE&nbsp;
-          </span>
-        </button>
-      </a>
-      <div className="flex-row justify-around items-center hidden lg:flex">
+    <div className="flex flex-row justify-start py-2 bottom-0 absolute z-10 lg:hidden ">
+      <div className="flex flex-row justify-around items-center">
         <a
           href="https://portfolio-mu-five-87.vercel.app/"
           target="_blank"

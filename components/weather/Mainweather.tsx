@@ -1,27 +1,36 @@
 "use client";
 import { useContext } from "react";
 import { WeatherContext } from "@/context/Weather";
-import Loader from "../ui/Loader";
+import Temp from "@/components/weather/Temp";
+import Temperature from "@/components/weather/Temperature";
+import Vent from "@/components/weather/Vent";
+import Loader from "@/components/ui/Loader";
 
 export default function Mainweather() {
   const weather = useContext(WeatherContext);
   return (
-    <div className="w-56 h-56">
-      {/* https://openweathermap.org/current */}
-      {weather == null && <Loader />}
+    <div className="h-full w-full">
+      {weather == null && (
+        <div className="flex flex-col justify-center items-center mt-16">
+          <div>
+            <h4 className="text-4xl text-slate-200 pb-2 lg:pb-8">
+              Entrez une localisation
+            </h4>
+          </div>
+          <Loader />
+        </div>
+      )}
       {weather && (
-        <div className="text-white">
-          {weather.main && <p>Temperature: {weather.main.temp}°C</p>}
-          {weather.main && (
-            <p>wind_speed: {Math.round(weather.wind.speed * 3.6)}km/h</p>
-          )}
-          {weather.main && <p>wind_deg: {weather.wind.deg}°</p>}
-          {weather.weather && weather.weather[0] && (
-            <p>Weather: {weather.weather[0].main}</p>
-          )}
-          {weather.weather && weather.weather[0] && (
-            <p>Weather: {weather.weather[0].description}</p>
-          )}
+        <div className="h-full w-full flex flex-row justify-center items-center ">
+          <div className="w-1/3 h-full ">
+            <Temp />
+          </div>
+          <div className="w-1/3 h-full">
+            <Vent />
+          </div>
+          <div className="w-1/3 h-full">
+            <Temperature />
+          </div>
         </div>
       )}
     </div>

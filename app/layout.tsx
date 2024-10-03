@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/bloc/Header";
+import Footer from "@/components/bloc/Footer";
 
 import { cn } from "@/lib/utils";
 
@@ -27,11 +28,12 @@ export default function RootLayout({
       <body
         className={cn(
           lato,
-          "w-screen min-h-screen overflow-x-hidden bg-gradient-to-t from-gray-950 to-slate-900"
+          "w-screen h-screen overflow-x-hidden bg-gradient-to-t from-gray-950 to-slate-900"
         )}
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
