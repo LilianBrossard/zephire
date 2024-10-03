@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { WeatherContext } from "@/context/Weather";
 
 export default function Temp() {
-  const weather = useContext(WeatherContext);
+  const weather = useContext<any>(WeatherContext);
   return (
     <div className="w-56 h-56">
       {/* https://openweathermap.org/current */}

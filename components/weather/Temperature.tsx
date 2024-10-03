@@ -4,7 +4,7 @@ import { WeatherContext } from "@/context/Weather";
 import Loader from "@/components/ui/Loader";
 
 export default function Temperature() {
-  const weather = useContext(WeatherContext);
+  const weather = useContext<any>(WeatherContext);
   return (
     <div className="w-56 h-56">
       {/* https://openweathermap.org/current */}
