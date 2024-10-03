@@ -13,8 +13,8 @@ export default function Mainweather() {
       {weather == null && (
         <div className="flex flex-col justify-center items-center mt-16">
           <div>
-            <h4 className="text-4xl text-slate-200 pb-2 lg:pb-8">
-              Entrez une localisation
+            <h4 className="text-4xl text-slate-200 mt-4 lg:mt-32">
+              En attente d'une localisation
             </h4>
           </div>
           <Loader />

@@ -75,7 +75,7 @@ export default function Home() {
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              placeholder="Enter location"
+              placeholder="Entrez la localisation"
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
                   handleSearch();

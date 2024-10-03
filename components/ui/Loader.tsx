@@ -2,10 +2,8 @@ import React from "react";
 
 export default function Loader() {
   return (
-    <div className="flex-col gap-4 w-full flex items-center justify-center">
-      <div className="w-20 lg:w-80 h-20 lg:h-80 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full">
-        <div className="w-16 lg:w-64 h-16 lg:h-64 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-red-400 rounded-full"></div>
-      </div>
+    <div className="loader -z-20">
+      <div className="justify-content-center jimu-primary-loading"></div>
     </div>
   );
 }
