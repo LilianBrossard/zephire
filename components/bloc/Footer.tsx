@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Recherche() {
   return (
-    <div className="flex flex-row justify-start py-2 bottom-0 absolute z-10 lg:hidden ">
+    <div className="flex flex-row justify-start fixed py-2 bottom-0 z-10 lg:hidden ">
       <div className="flex flex-row justify-around items-center">
         <a
           href="https://portfolio-mu-five-87.vercel.app/"

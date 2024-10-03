@@ -33,7 +33,7 @@ export default function Home() {
         // https://openweathermap.org/current
         // Fetch weather data from OpenWeather
         const weatherResponse = await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&exclude=minutely,hourly,daily&appid=${openweatherkey}&units=metric`
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=fr&appid=${openweatherkey}&units=metric`
         );
         const weatherData = await weatherResponse.json();
         setWeather(weatherData);
@@ -48,7 +48,7 @@ export default function Home() {
   };
 
   return (
-    <main className="w-screen">
+    <main className="w-screen lg:h-[93%]">
       {/* <div>
         <input
           type="text"
@@ -68,7 +68,7 @@ export default function Home() {
         {isLoading && <p className="text-white">Loading...</p>}
         {error && <p className="text-red-500">{error}</p>}
       </div> */}
-      <div className="w-full flex justify-center my-2">
+      <div className="w-full h-min lg:h-[10%] flex justify-center py-2">
         <div className="w-64 sm:w-80 md:w-96">
           <div className="relative">
             <input
@@ -86,7 +86,7 @@ export default function Home() {
             <div className="absolute inset-y-0 right-0 flex items-center pr-3">
               <button
                 onClick={handleSearch}
-                className=" z-10 w-12 h-12 hover:scale-105 duration-700"
+                className=" z-10 w-12 h-12 hover:scale-105 animate-pulse duration-700"
               >
                 <Image
                   src={`./search.svg`}
@@ -114,7 +114,7 @@ export default function Home() {
           {error && <span className="text-red-500">{error}</span>}
         </div>
       </div>
-      <div className="w-full">
+      <div className="w-full h-full lg:h-[90%]">
         <WeatherContext.Provider value={weather}>
           <Mainweather />
         </WeatherContext.Provider>

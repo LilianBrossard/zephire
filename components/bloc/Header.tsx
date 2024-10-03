@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Recherche() {
   return (
-    <div className="flex flex-row justify-between px-4 py-2 xl:px-16 z-10 w-screen styleback">
+    <div className="flex flex-row justify-between px-4 py-2 xl:px-16 z-10 w-screen styleback lg:h-[7%]">
       <a href="/">
         <button
           className="button hover:scale-105 duration-700 px-4"

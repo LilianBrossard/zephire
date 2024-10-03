@@ -13,9 +13,9 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Météo",
+  title: "Zephire",
   description:
-    "météo, prévisions, température, climat, météorologie, conditions météorologiques, météo locale, météo en direct, météo du jour, météo de demain, météo de la semaine, météo internationale, météo locale, météo en ligne, météo gratuite, météo précise, météo fiable, météo actuelle, météo France, météo Europe",
+    "météo, prévisions, température, climat, météorologie, conditions météorologiques, météo locale, météo en direct, météo du jour, météo internationale, météo locale, météo en ligne, météo gratuite, météo précise, météo fiable, météo actuelle, météo France, météo Europe",
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className={cn(
           lato,
-          "w-screen h-screen overflow-x-hidden bg-gradient-to-t from-gray-950 to-slate-900"
+          "w-screen h-screen overflow-x-hidden bg-gradient-to-t from-slate-400 to-slate-700"
         )}
       >
         <Header />
