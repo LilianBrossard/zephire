@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
-import "./globals.css";
+import "./css/globals.css";
 import Header from "@/components/bloc/Header";
 import Footer from "@/components/bloc/Footer";
 

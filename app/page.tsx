@@ -86,7 +86,7 @@ export default function Home() {
             <div className="absolute inset-y-0 right-0 flex items-center pr-3">
               <button
                 onClick={handleSearch}
-                className=" z-10 w-12 h-12 hover:scale-105 animate-pulse duration-700"
+                className=" z-10 w-12 h-12 hover:scale-105 duration-700"
               >
                 <Image
                   src={`./search.svg`}

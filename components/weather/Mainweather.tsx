@@ -14,7 +14,7 @@ export default function Mainweather() {
         <div className="flex flex-col justify-center items-center pt-16">
           <div>
             <h4 className="text-4xl text-slate-200 pt-4 lg:pt-32">
-              En attente d'une localisation
+              En attente d&apos;une localisation
             </h4>
           </div>
           <Loader />
